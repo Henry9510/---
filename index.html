@@ -4,7 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="style.css">
+
 
     <title>Gestión de Proyectos</title>
 
@@ -12,144 +12,130 @@
 
 <body>
     <header>
-        
         <h1>Gestión de Proyectos</h1>
 
-
     </header>
-    <nav class="sidebar">
-        <a href="#materia-prima">Materia Prima</a>
-        <a href="#personal">Personal</a>
-        <a href="#proyectos">Proyectos</a>
-        <a href="#Reportes">Reportes</a>
-    </nav>
-    <div class="container">
-        <!-- Materia Prima Section -->
-        <section id="materia-prima" class="section">
-            <h2>Gestión de Materia Prima</h2>
-            <div class="card">
-                <h3>Solicitud de Materia Prima</h3>
-                <form>
-                    <label for="Proyecto">Proyecto:</label>
-                    <input type="text" id="Proyecto" name="Proyecto"><br><br>
-                    <label for="Movimiento">Tipo de movimeinto:</label>
-                    <select name="Movimiento" id="Movimiento">
-                        <option value="Devolucion">Devolver</option>
-                        <option value="Tranferencia">Transferir</option>
-                        <option value="Almacenar">Almacenar</option>
-                    </select><br><br>
-                    <label for="codigo">Codigo:</label>
-                    <input type="text" id="codigo" name="codigo"><br><br>
-                    <label for="item">Item:</label>
-                    <input type="text" id="item" name="item"><br><br>
-                    <label for="cantidad">Cantidad:</label>
-                    <input type="number" id="cantidad" name="cantidad"><br><br>
-                    <button type="submit">Solicitar</button>
-                </form>
-            </div>
-            <div class="card">
-                <h3>Inventario de Materia Prima</h3>
-                <!-- Tabla de inventario -->
-                <table>
-                    <tr>
-                        <th>Item</th>
-                        <th>Cantidad Disponible</th>
-                    </tr>
-                    <tr>
-                        <td>Item 1</td>
-                        <td>100</td>
-                    </tr>
-                    <tr>
-                        <td>Item 2</td>
-                        <td>50</td>
-                    </tr>
-                </table>
-            </div>
-        </section>
 
 
-        <!-- Personal Section -->
-        <section id="personal" class="section">
-            <h2>Gestión de Personal</h2>
-            <div class="card">
-                <h3>Registro de Horas Trabajadas</h3>
-                <form>
-                    <label for="nombre">Nombre:</label>
-                    <input type="text" id="nombre" name="nombre"><br><br>
-                    <label for="horas">Horas Trabajadas:</label>
-                    <input type="number" id="horas" name="horas"><br><br>
-                    <button type="submit">Registrar</button>
-                </form>
-            </div>
-            <div class="card">
-                <h3>Asistencia</h3>
-                <!-- Tabla de asistencia -->
-                <table>
-                    <tr>
-                        <th>Nombre</th>
-                        <th>Fecha</th>
-                        <th>Estado</th>
-                    </tr>
-                    <tr>
-                        <td>Juan Pérez</td>
-                        <td>2024-07-25</td>
-                        <td>Presente</td>
-                    </tr>
-                    <tr>
-                        <td>Ana Gómez</td>
-                        <td>2024-07-25</td>
-                        <td>Ausente</td>
-                    </tr>
-                </table>
-            </div>
-        </section>
-        <!-- Proyectos Section -->
-        <section id="proyectos" class="section">
-            <h2>Gestión de Proyectos</h2>
-            <div class="card">
-                <h3>Insumos Consumidos</h3>
-                <!-- Tabla de insumos -->
-                <table>
-                    <tr>
-                        <th>Proyecto</th>
-                        <th>Insumo</th>
-                        <th>Cantidad</th>
-                    </tr>
-                    <tr>
-                        <td>Proyecto A</td>
-                        <td>Item 1</td>
-                        <td>10</td>
-                    </tr>
-                    <tr>
-                        <td>Proyecto B</td>
-                        <td>Item 2</td>
-                        <td>5</td>
-                    </tr>
-                </table>
-            </div>
-            <div class="card">
-                <h3>Horas en Producción</h3>
-                <!-- Tabla de horas -->
-                <table>
-                    <tr>
-                        <th>Proyecto</th>
-                        <th>Empleado</th>
-                        <th>Horas</th>
-                    </tr>
-                    <tr>
-                        <td>Proyecto A</td>
-                        <td>Juan Pérez</td>
-                        <td>8</td>
-                    </tr>
-                    <tr>
-                        <td>Proyecto B</td>
-                        <td>Ana Gómez</td>
-                        <td>6</td>
-                    </tr>
-                </table>
-            </div>
-        </section>
-    </div>
+    <main>
+
+        <nav class="sidebar">
+            <a href="GestMate.html">Materia Prima</a>
+            <a href="Personas.html">Personal</a>
+            <a href="Proyectos.html">Proyectos</a>
+            <a href="#Reportes">Reportes</a>
+        </nav>
+
+
+        <div class="container">
+
+            <!-- Materia Prima Section -->
+            <section id="ProyectosMes" class="ProyectosMes">
+
+                <div class="Proyectos_Mes">
+                    <h3>Proyectos del Mes</h3>
+                    <!-- Tabla de inventario -->
+                    <table>
+                        <tr>
+                            <th>Proyecto</th>
+                            <th>Horas Disponible </th>
+                            
+                        </tr>
+                        <tr>
+                            <td>Proyceto 1</td>
+                            <td> 100 </td>
+                            
+                        </tr>
+                        <tr>
+                            <td>Proyecto 2</td>
+                            <td> 50 </td>
+                           
+                        </tr>
+                    </table>
+                </div>
+            </section>
+            <!-- Materia Prima Section -->
+            <section id="TiempoEntrega" class="sectionT_Entrega">
+
+                <div class="card">
+                    <h3>Proyectos Terminados del mes</h3>
+                    <!-- Tabla de inventario -->
+                    <table>
+                        <tr>
+                            <th>Proyecto</th>
+                            <th>Horas Disponible </th>
+                            <th>Horas Totales </th>
+                        </tr>
+                        <tr>
+                            <td>Proyceto 1</td>
+                            <td> 100 </td>
+                            <td> 100 </td>
+                        </tr>
+                        <tr>
+                            <td>Proyecto 2</td>
+                            <td> 50 </td>
+                            <td> 100 </td>
+                        </tr>
+                    </table>
+                </div>
+            </section>
+            
+            <section id="Uso_Material" class="Eficiencia_Material">
+
+                <div class="card">
+                    <h3>Solicitudes de Material x Proyecto</h3>
+                    <!-- Tabla de inventario -->
+                    <table>
+                        <tr>
+                            <th>Proyecto</th>
+                            <th>Numero de Solicitudes </th>
+                            <th>Fecha </th>
+                        </tr>
+                        <tr>
+                            <td>Proyceto 1</td>
+                            <td> 100 </td>
+                            <td> 1/1/1990 </td>
+                        </tr>
+                        <tr>
+                            <td>Proyecto 2</td>
+                            <td> 50 </td>
+                            <td> 1/1/1990 </td>
+                        </tr>
+                    </table>
+                </div>
+            </section>
+
+            <!-- Proyectos Section -->
+            <section id="proyectos" class="section">
+
+                <div class="card">
+                    <h3>Horas en Equipos en Proceso</h3>
+                    <!-- Tabla de horas -->
+                    <table>
+                        <tr>
+                            <th>Proyecto</th>
+                            <th>Empleado</th>
+                            <th>Horas</th>
+                        </tr>
+                        <tr>
+                            <td>Proyecto A</td>
+                            <td>Juan Pérez</td>
+                            <td>8</td>
+                        </tr>
+                        <tr>
+                            <td>Proyecto B</td>
+                            <td>Ana Gómez</td>
+                            <td>6</td>
+                        </tr>
+                    </table>
+                </div>
+            </section>
+        </div>
+    </main>
+    <footer>
+
+
+    </footer>
 </body>
 
 </html>
