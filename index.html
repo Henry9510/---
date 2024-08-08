@@ -4,151 +4,262 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="style.css">
-
-
     <title>Gestión de Proyectos</title>
+    <link rel="stylesheet" href="style.css"> <!-- Tu archivo CSS personalizado -->
 
 </head>
 
 <body>
-    <header class="Contenedor-Inicio">
-        <diV class="Contenedor-Cabecera">
+    <header>
+        <div>
+            <ul>
+                <li> <a href=""> Inicio </a> </li>
+                <li> <label> Buscar <input type="text" placeholder="buscar" </li>
+                <li> <label> Configurar
+                        <ul>
+                            <li>Subelemento 1</li>
+                            <li>Subelemento 2</li>
+                        </ul>
+                </li>
+                <li> <label> Notificaaciones
+                        <ul>
+                            <li>Subelemento 1</li>
+                            <li>Subelemento 2</li>
+                        </ul>
 
-            <a href="index.html"> <img src="/img/logo.jpg"> </a>
-            <h1>MyAPP</h1>
-            <input type="text" placeholder="Buscar">
-            <img src="img/setting_5689386.png">
-            <img src="img/time_16601395.png">
-            <img src="img/pexels-christina-morillo-1181690 1.png">
-
+                </li>
+                <li> <label> inicio de seccion
+                        <ul>
+                            <li>Subelemento 1</li>
+                            <li>Subelemento 2</li>
+                        </ul>
+                </li>
+            </ul>
         </div>
-
     </header>
 
-    <a href="prueba.html"> prueba </a>
+
 
     <main>
-        <div>
-            <nav class="sidebar">
-                <a href="index.html">INICIO</a>
-                <a href="GestMate.html">Materia Prima</a>
-                <a href="Personas.html">Personal</a>
-                <a href="Proyectos.html">Proyectos</a>
-                <a href="Reportes.html">Reportes</a>
-            </nav>
-        </div>
+        <!--barra navegacion lateral-->
+        <section>
+            <aside>
+                <div>
+                    <ul>
+                        <li> <a href=""> Inicio </a> </li>
+                        <li> Usuarios
+                            <ul>
+                                <a href="crear.html">
+                                    <li>Crear</li>
+                                </a>
+                                <a href="registrar.html">
+                                    <li>Registro de horas</li>
+                                </a>
+                            </ul>
+                        </li>
+                        <li> <a href=""> Inventario</a> </li>
+                        <ul>
+                            <a href="crearProducto.html">
+                                <li>Crear producto</li>
+                            </a>
+                            <a href="transferirAlmacen.html">
+                                <li>Transferir a almacen</li>
+                            </a>
 
+                            <a href="transferirProyecto.html">
+                                <li>Transferir a proyecto</li>
+                            </a>
 
-        <div class="container">
+                            <a href="">
+                                <li>Transferir a almacen</li>
+                            </a>
+                        </ul>
 
-            <!-- Materia Prima Section -->
-            <section id="ProyectosMes" class="ProyectosMes">
+                        <li> <a href=""> Proyectos</a> </li>
 
-                <div class="card">
-                    <h3>Proyectos del Mes</h3>
-                    <!-- Tabla de inventario -->
-                    <table>
-                        <tr>
-                            <th>Proyecto</th>
-                            <th>Horas Disponible </th>
+                        <ul>
+                            <a href="crear.html">
+                                <li>Crear</li>
+                            </a>
+                            <a href="registrar.html">
+                                <li>Registro de horas</li>
+                            </a>
+                        </ul>
+                        <li> <a href=""> Reportes</a> </li>
 
-                        </tr>
-                        <tr>
-                            <td>Proyceto 1</td>
-                            <td> 100 </td>
-
-                        </tr>
-                        <tr>
-                            <td>Proyecto 2</td>
-                            <td> 50 </td>
-
-                        </tr>
-                    </table>
+                        <ul>
+                            <a href="crear.html">
+                                <li>Crear</li>
+                            </a>
+                            <a href="registrar.html">
+                                <li>Registro de horas</li>
+                            </a>
+                        </ul>
+                    </ul>
                 </div>
-            </section>
-            <!-- Materia Prima Section -->
-            <section id="TiempoEntrega" class="sectionT_Entrega">
-
-                <div class="card">
-                    <h3>Proyectos Terminados del mes</h3>
-                    <!-- Tabla de inventario -->
-                    <table>
+            </aside>
+        </section>
+        <!-- tarjetas dinamicas -->
+        <section>
+            <div>
+                <div>Tarjeta proyectos mes</div>
+                <div>Tarjeta proyecto terminado mes</div>
+                <div>Tarjeta total de solicitudes </div>
+                <div>Tarjeta total de faltante </div>
+            </div>
+        </section>
+        <!-- tabla proyecto mes -->
+        <section>
+            <div>
+                <table>
+                    <thead>
                         <tr>
                             <th>Proyecto</th>
-                            <th>Horas Disponible </th>
-                            <th>Horas Totales </th>
+                            <th>Horas estimadas</th>
+                            <th>Horas reales</th>
                         </tr>
+                    </thead>
+                    <tbody>
                         <tr>
-                            <td>Proyceto 1</td>
-                            <td> 100 </td>
-                            <td> 100 </td>
-                        </tr>
-                        <tr>
-                            <td>Proyecto 2</td>
-                            <td> 50 </td>
-                            <td> 100 </td>
-                        </tr>
-                    </table>
-                </div>
-            </section>
-
-            <section id="Uso_Material" class="Eficiencia_Material">
-
-                <div class="card">
-                    <h3>Solicitudes de Material x Proyecto</h3>
-                    <!-- Tabla de inventario -->
-                    <table>
-                        <tr>
-                            <th>Proyecto</th>
-                            <th>Numero de Solicitudes </th>
-                            <th>Fecha </th>
-                        </tr>
-                        <tr>
-                            <td>Proyceto 1</td>
-                            <td> 100 </td>
-                            <td> 1/1/1990 </td>
-                        </tr>
-                        <tr>
-                            <td>Proyecto 2</td>
-                            <td> 50 </td>
-                            <td> 1/1/1990 </td>
-                        </tr>
-                    </table>
-                </div>
-            </section>
-
-            <!-- Proyectos Section -->
-            <section id="proyectos" class="section">
-
-                <div class="card">
-                    <h3>Horas en Equipos en Proceso</h3>
-                    <!-- Tabla de horas -->
-                    <table>
-                        <tr>
-                            <th>Proyecto</th>
-                            <th>Empleado</th>
-                            <th>Horas</th>
-                        </tr>
-                        <tr>
-                            <td>Proyecto A</td>
                             <td>Juan Pérez</td>
-                            <td>8</td>
+                            <td>28</td>
+                            <td>2</td>
                         </tr>
                         <tr>
-                            <td>Proyecto B</td>
-                            <td>Ana Gómez</td>
-                            <td>6</td>
+                            <td>Ana López</td>
+                            <td>34</td>
+                            <td>5</td>
                         </tr>
-                    </table>
-                </div>
-            </section>
-        </div>
+                        <tr>
+                            <td>María García</td>
+                            <td>22</td>
+                            <td>20</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+            <!-- tabla proyecto mes terminado -->
+            <div>
+                <table>
+                    <thead>
+                        <tr>
+                            <th>Proyecto</th>
+                            <th>Horas estimadas</th>
+                            <th>Horas reales</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>Juan Pérez</td>
+                            <td>28</td>
+                            <td>2</td>
+                        </tr>
+                        <tr>
+                            <td>Ana López</td>
+                            <td>34</td>
+                            <td>5</td>
+                        </tr>
+                        <tr>
+                            <td>María García</td>
+                            <td>22</td>
+                            <td>20</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </section>
+
+        <!-- tabla de barras -->
+        <section>
+
+            <div>
+                <table>
+                    <thead>
+                        <tr>
+                            <th></th>
+                            <th>Proyecto 1</th>
+                            <th>Proyecto 2</th>
+                            <th>Proyecto 3</th>
+                            <th>Proyecto 4</th>
+                            <th>Proyecto 5</th>
+                        </tr>
+                        </thad>
+                    <tbody>
+                        <tr>
+                            <td>horas est</td>
+                            <td>22</td>
+                            <td>20</td>
+                            <td>22</td>
+                            <td>20</td>
+                            <td>20</td>
+
+                        </tr>
+                        <tr>
+                            <td>horas totales</td>
+                            <td>22</td>
+                            <td>20</td>
+                            <td>22</td>
+                            <td>20</td>
+                            <td>20</td>
+                        </tr>
+                        <tr>
+
+                        </tr>
+                    </tbody>
+                </table>
+
+            </div>
+            <!-- tabla de barras faltantes-->
+            <div>
+                <table>
+                    <thead>
+                        <tr>
+                            <th></th>
+                            <th>Proyecto 1</th>
+                            <th>Proyecto 2</th>
+                            <th>Proyecto 3</th>
+                            <th>Proyecto 4</th>
+                            <th>Proyecto 5</th>
+                        </tr>
+                        </thad>
+                    <tbody>
+                        <tr>
+                            <td>consumo</td>
+                            <td>22</td>
+                            <td>20</td>
+                            <td>22</td>
+                            <td>20</td>
+                            <td>20</td>
+
+                        </tr>
+                        <tr>
+                            <td>faltantes</td>
+                            <td>22</td>
+                            <td>20</td>
+                            <td>22</td>
+                            <td>20</td>
+                            <td>20</td>
+                        </tr>
+                        <tr>
+
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+
+        </section>
+
     </main>
     <footer>
 
+        <p>SENA 2024</p>
+
+
 
     </footer>
+
+
+
 </body>
 
 </html>

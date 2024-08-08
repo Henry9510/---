@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+
+    <div>
+        <nav class="sidebar">
+            <a href="index.html">INICIO</a>
+            <a href="GestMate.html">Materia Prima</a>
+            <a href="Personas.html">Personal</a>
+            <a href="Proyectos.html">Proyectos</a>
+            <a href="Reportes.html">Reportes</a>
+        </nav>
+    </div>
+
+    <h2>Gestión de Materia Prima</h2>s
+    <div class="card">
+        <h3>Solicitud de Materia Prima</h3>
+        <form>
+            <label for="Proyecto">Proyecto:</label>
+            <input type="text" id="Proyecto" name="Proyecto"><br><br>
+            <label for="Movimiento">Tipo de movimeinto:</label>
+            <select name="Movimiento" id="Movimiento">
+                <option value="Devolucion">Devolver</option>
+                <option value="Tranferencia">Transferir</option>
+                <option value="Almacenar">Almacenar</option>
+            </select><br><br>
+            <label for="codigo">Codigo:</label>
+            <input type="text" id="codigo" name="codigo"><br><br>
+            <label for="item">Item:</label>
+            <input type="text" id="item" name="item"><br><br>
+            <label for="cantidad">Cantidad:</label>
+            <input type="number" id="cantidad" name="cantidad"><br><br>
+            <button type="submit">Solicitar</button>
+        </form>
+    </div>
+    
+</body>
+</html>
