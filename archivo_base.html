@@ -1,0 +1,317 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gestión de Proyectos</title>
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <link rel="stylesheet" href="style.css"> <!-- Tu archivo CSS personalizado -->
+    <style>
+        /* Estilo para la cabecera fija */
+        header {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            background-color: #f8f9fa;
+            z-index: 1000;
+            border-bottom: 1px solid #ddd;
+            padding: 10px;
+        }
+
+        /* Estilo para la barra de navegación lateral fija */
+        .sidebar {
+            position: fixed;
+            top: 56px; /* Altura de la cabecera */
+            left: 0;
+            width: 250px;
+            height: calc(100vh - 56px); /* Resta la altura de la cabecera */
+            background-color: #343a40;
+            color: white;
+            padding: 20px;
+            overflow-y: auto;
+            border-right: 1px solid #ddd;
+        }
+
+        .sidebar a {
+            color: white;
+            text-decoration: none;
+            display: block;
+            padding: 10px;
+            border-radius: 5px;
+            margin-bottom: 10px;
+        }
+
+        .sidebar a:hover {
+            background-color: #495057;
+        }
+
+        /* Estilo para el contenido principal */
+        main {
+            margin-left: 250px;
+            padding-top: 100px; /* Espacio para la cabecera */
+        }
+
+        .card {
+            border: 1px solid #ddd;
+            border-radius: 8px;
+            padding: 20px;
+            margin-bottom: 20px;
+        }
+
+        /* Estilo para las barras de comparación verticales */
+        .bar-chart {
+            display: flex;
+            justify-content: space-between;
+            align-items: flex-end;
+            height: 400px; /* Altura total del gráfico */
+            margin-top: 20px;
+        }
+
+        .bar {
+            position: relative;
+            width: 80px; /* Ancho de cada barra */
+            margin: 0 10px;
+        }
+
+        .bar .value1 {
+            background-color: #007bff;
+            height: 0; /* Ajustar altura con el atributo data-value1 */
+            width: 100%;
+            position: absolute;
+            bottom: 0;
+            border-radius: 5px 5px 0 0;
+        }
+
+        .bar .value2 {
+            background-color: #28a745;
+            height: 0; /* Ajustar altura con el atributo data-value2 */
+            width: 100%;
+            position: absolute;
+            bottom: 0;
+            border-radius: 5px 5px 0 0;
+        }
+
+        .bar .label {
+            text-align: center;
+            margin-top: 10px;
+        }
+
+        .bar .value-label {
+            text-align: center;
+            margin-top: 5px;
+        }
+
+        /* Estilo para las barras según los datos */
+        #HorasHombreVsProyecto .bar[data-value1="100"] .value1 {
+            height: 100%;
+        }
+
+        #HorasHombreVsProyecto .bar[data-value2="32"] .value2 {
+            height: 32%;
+        }
+
+        #ProyectoVsFaltantes .bar[data-value1="100"] .value1 {
+            height: 100%;
+        }
+
+        #ProyectoVsFaltantes .bar[data-value2="50"] .value2 {
+            height: 50%;
+        }
+    </style>
+</head>
+
+<body>
+    <header class="container-fluid d-flex align-items-center justify-content-between">
+        <a href="index.html"><img src="logo.png" alt="Logo" class="img-fluid"> Imagen logo</a>
+        <h1 class="h3">MyApp</h1>
+        <input type="text" class="form-control w-25" placeholder="Buscar">
+        <div class="d-flex">
+            <img src="config.png" alt="Configuración" title="Configuración" class="img-fluid mx-2">
+            <img src="notifications.png" alt="Notificaciones" title="Notificaciones" class="img-fluid mx-2">
+            <img src="profile.png" alt="Perfil" title="Perfil" class="img-fluid mx-2">
+        </div>
+    </header>
+
+    <nav class="sidebar">
+        <a href="index.html">Inicio</a>
+        <a href="GestMate.html">Transacciones</a>
+        <a href="Personas.html">Empleado</a>
+        <a href="Proyectos.html">Inventario</a>
+        <a href="Reportes.html">Proyectos</a>
+        <a href="Reportes.html">Reportes</a>
+        <a href="Reportes.html">Alertas</a>
+        <a href="Reportes.html">Configuraciones</a>
+    </nav>
+
+    <main class="container">
+        <div class="row">
+            <div class="col-md-3">
+                <div class="card">
+                    <h4>Horas Productivas</h4>
+                </div>
+            </div>
+            <div class="col-md-3">
+                <div class="card">
+                    <h4>Costo Materia Prima</h4>
+                </div>
+            </div>
+            <div class="col-md-3">
+                <div class="card">
+                    <h4>Número de Solicitudes de Material</h4>
+                </div>
+            </div>
+            <div class="col-md-3">
+                <div class="card">
+                    <h4>Total de Material Faltante</h4>
+                </div>
+            </div>
+        </div>
+
+        <section id="ProyectosMes" class="my-4">
+            <div class="card">
+                <h3>Proyectos del Mes</h3>
+                <table class="table table-striped">
+                    <thead>
+                        <tr>
+                            <th>Proyecto</th>
+                            <th>Horas Disponibles</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>Proyecto 1</td>
+                            <td>100</td>
+                        </tr>
+                        <tr>
+                            <td>Proyecto 2</td>
+                            <td>50</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </section>
+
+        <section id="ProyectosTerminados" class="my-4">
+            <div class="card">
+                <h3>Proyectos Terminados del Mes</h3>
+                <table class="table table-striped">
+                    <thead>
+                        <tr>
+                            <th>Proyecto</th>
+                            <th>Horas Disponibles</th>
+                            <th>Horas Totales</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>Proyecto 1</td>
+                            <td>100</td>
+                            <td>30</td>
+                        </tr>
+                        <tr>
+                            <td>Proyecto 2</td>
+                            <td>50</td>
+                            <td>100</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </section>
+
+        <!-- Horas Hombre vs Proyecto Section -->
+        <section id="HorasHombreVsProyecto" class="my-4">
+            <div class="card">
+                <h3>Horas Hombre vs Proyecto</h3>
+                <div class="bar-chart">
+                    <div class="bar" data-value1="30" data-value2="32">
+                        <div class="value1"></div>
+                        <div class="value2"></div>
+                        <div class="label">Proyecto 1</div>
+                        <div class="value-label">30 / 32</div>
+                    </div>
+                    <div class="bar" data-value1="50" data-value2="45">
+                        <div class="value1"></div>
+                        <div class="value2"></div>
+                        <div class="label">Proyecto 2</div>
+                        <div class="value-label">50 / 45</div>
+                    </div>
+                    <div class="bar" data-value1="70" data-value2="65">
+                        <div class="value1"></div>
+                        <div class="value2"></div>
+                        <div class="label">Proyecto 3</div>
+                        <div class="value-label">70 / 65</div>
+                    </div>
+                    <div class="bar" data-value1="90" data-value2="85">
+                        <div class="value1"></div>
+                        <div class="value2"></div>
+                        <div class="label">Proyecto 4</div>
+                        <div class="value-label">90 / 85</div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Proyecto vs Faltantes Section -->
+        <section id="ProyectoVsFaltantes" class="my-4">
+            <div class="card">
+                <h3>Proyecto vs Faltantes</h3>
+                <div class="bar-chart">
+                    <div class="bar" data-value1="100" data-value2="50">
+                        <div class="value1"></div>
+                        <div class="value2"></div>
+                        <div class="label">Proyecto 1</div>
+                        <div class="value-label">100 / 50</div>
+                    </div>
+                    <div class="bar" data-value1="80" data-value2="60">
+                        <div class="value1"></div>
+                        <div class="value2"></div>
+                        <div class="label">Proyecto 2</div>
+                        <div class="value-label">80 / 60</div>
+                    </div>
+                    <div class="bar" data-value1="60" data-value2="40">
+                        <div class="value1"></div>
+                        <div class="value2"></div>
+                        <div class="label">Proyecto 3</div>
+                        <div class="value-label">60 / 40</div>
+                    </div>
+                    <div class="bar" data-value1="70" data-value2="55">
+                        <div class="value1"></div>
+                        <div class="value2"></div>
+                        <div class="label">Proyecto 4</div>
+                        <div class="value-label">70 / 55</div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="container-fluid text-center py-3">
+        <p>&copy; 2024 MyApp. Todos los derechos reservados.</p>
+    </footer>
+
+    <!-- Bootstrap JS and dependencies -->
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.10.2/dist/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            // Actualiza el alto de las barras basado en los valores de datos
+            document.querySelectorAll('.bar').forEach(function(bar) {
+                const value1 = bar.getAttribute('data-value1');
+                const value2 = bar.getAttribute('data-value2');
+                const totalHeight = 100; // Altura total de la barra (100%)
+
+                const value1Height = (value1 / totalHeight) * 100;
+                const value2Height = (value2 / totalHeight) * 100;
+
+                bar.querySelector('.value1').style.height = `${value1Height}%`;
+                bar.querySelector('.value2').style.height = `${value2Height}%`;
+            });
+        });
+    </script>
+</body>
+
+</html>
