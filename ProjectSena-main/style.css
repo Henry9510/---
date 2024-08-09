@@ -1,0 +1,141 @@
+/* Reseteo de márgenes y paddings predeterminados */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Estilos básicos para el cuerpo */
+body {
+    font-family: Arial, sans-serif;
+    line-height: 1.6;
+    color: #333;
+    background-color: #f4f4f4;
+}
+
+/* Estilos del encabezado */
+header {
+    background-color: #333;
+    color: #fff;
+    padding: 1rem;
+}
+
+header nav ul {
+    list-style: none;
+    display: flex;
+    justify-content: space-between;
+}
+
+header nav ul li {
+    margin-right: 1rem;
+}
+
+header nav ul li a {
+    color: #fff;
+    text-decoration: none;
+}
+
+header nav ul li input[type="text"] {
+    padding: 0.5rem;
+    border: none;
+    border-radius: 5px;
+}
+
+/* Estilos de la barra lateral */
+aside {
+    background-color: #333;
+    color: #fff;
+    width: 250px;
+    position: fixed;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    padding: 1rem;
+}
+
+aside nav ul {
+    list-style: none;
+}
+
+aside nav ul li {
+    margin-bottom: 1rem;
+}
+
+aside nav ul li a {
+    color: #fff;
+    text-decoration: none;
+}
+
+aside nav ul ul {
+    margin-top: 0.5rem;
+    margin-left: 1rem;
+}
+
+aside nav ul ul li {
+    margin-bottom: 0.5rem;
+}
+
+/* Estilos para el contenido principal */
+main {
+    margin-left: 250px; /* Espacio para la barra lateral */
+    padding: 1rem;
+}
+
+/* Estilos para las tarjetas dinámicas */
+.cards {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 2rem;
+}
+
+.card {
+    background: #fff;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    padding: 1rem;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+    flex: 1;
+    margin: 0 0.5rem;
+}
+
+/* Estilos para las tablas */
+.table-container {
+    margin-bottom: 2rem;
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-bottom: 1rem;
+}
+
+th, td {
+    border: 1px solid #ddd;
+    padding: 0.75rem;
+    text-align: left;
+}
+
+th {
+    background-color: #f4f4f4;
+    font-weight: bold;
+}
+
+tr:nth-child(even) {
+    background-color: #f9f9f9;
+}
+
+/* Estilos del pie de página */
+footer {
+    background-color: #333;
+    color: #fff;
+    text-align: center;
+    padding: 1rem;
+    position: fixed;
+    width: calc(100% - 250px);
+    bottom: 0;
+    left: 250px; /* Alineado con la barra lateral */
+}
+
+footer p {
+    margin: 0;
+}
