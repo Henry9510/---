@@ -1,0 +1,236 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gestión de Proyectos</title>
+    <link rel="stylesheet" href="style.css"> <!-- Tu archivo CSS personalizado -->
+</head>
+
+<body>
+    <header>
+        <nav>
+            <ul>
+                <li><a href="#">Inicio</a></li>
+                <li>
+                    Buscar
+                    <input type="text" placeholder="Buscar">
+                </li>
+                <li>
+                    Configurar
+                    <ul>
+                        <li><a href="#">Subelemento 1</a></li>
+                        <li><a href="#">Subelemento 2</a></li>
+                    </ul>
+                </li>
+                <li>
+                    Notificaciones
+                    <ul>
+                        <li><a href="#">Subelemento 1</a></li>
+                        <li><a href="#">Subelemento 2</a></li>
+                    </ul>
+                </li>
+                <li>
+                    Inicio de sesión
+                    <ul>
+                        <li><a href="#">Subelemento 1</a></li>
+                        <li><a href="#">Subelemento 2</a></li>
+                    </ul>
+                </li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <!-- Barra de navegación lateral -->
+        <aside>
+            <nav>
+                <ul>
+                    <li><a href="#">Inicio</a></li>
+                    <li>
+                        Usuarios
+                        <ul>
+                            <li><a href="crear.html">Registrar</a></li>
+                            <li><a href="registrar.html">Registro de horas</a></li>
+                        </ul>
+                    </li>
+                    <li>
+                        Inventario
+                        <ul>
+                            <li><a href="crearProducto.html">Crear producto</a></li>
+                            <li><a href="transferirAlmacen.html">Transferir a almacén</a></li>
+                            <li><a href="transferirProyecto.html">Transferir a proyecto</a></li>
+                            <li><a href="listaTransferencia.html">Lista de Transferencia</a></li>
+                            <li><a href="almacen.html">Almacén</a></li>
+                        </ul>
+                    </li>
+                    <li>
+                        Proyectos
+                        <ul>
+                            <li><a href="crearProyectos.html">Nuevo</a></li>
+                            <li><a href="recibirPedidos.html">Recibir Pedidos</a></li>
+                        </ul>
+                    </li>
+                    <li>
+                        Reportes
+                        <ul>
+                            <li><a href="#">Avance en proyecto</a></li>
+                            <li><a href="#">Inventario de proyecto</a></li>
+                            <li><a href="#">Insulto Faltantes</a></li>
+                        </ul>
+                    </li>
+                </ul>
+            </nav>
+        </aside>
+
+        <!-- Tarjetas dinámicas -->
+        <section class="cards">
+            <div class="card">Tarjeta proyectos mes</div>
+            <div class="card">Tarjeta proyecto terminado mes</div>
+            <div class="card">Tarjeta total de solicitudes</div>
+            <div class="card">Tarjeta total de faltantes</div>
+        </section>
+
+        <!-- Tablas de proyectos -->
+        <section class="tables">
+            <!-- Tabla de proyectos del mes -->
+            <div class="table-container">
+                <h2>Proyectos del Mes</h2>
+                <table>
+                    <thead>
+                        <tr>
+                            <th>Proyecto</th>
+                            <th>Horas Estimadas</th>
+                            <th>Horas Reales</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>Juan Pérez</td>
+                            <td>28</td>
+                            <td>2</td>
+                        </tr>
+                        <tr>
+                            <td>Ana López</td>
+                            <td>34</td>
+                            <td>5</td>
+                        </tr>
+                        <tr>
+                            <td>María García</td>
+                            <td>22</td>
+                            <td>20</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+
+            <!-- Tabla de proyectos terminados del mes -->
+            <div class="table-container">
+                <h2>Proyectos Terminados del Mes</h2>
+                <table>
+                    <thead>
+                        <tr>
+                            <th>Proyecto</th>
+                            <th>Horas Estimadas</th>
+                            <th>Horas Reales</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>Juan Pérez</td>
+                            <td>28</td>
+                            <td>2</td>
+                        </tr>
+                        <tr>
+                            <td>Ana López</td>
+                            <td>34</td>
+                            <td>5</td>
+                        </tr>
+                        <tr>
+                            <td>María García</td>
+                            <td>22</td>
+                            <td>20</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+
+            <!-- Tabla de barras -->
+            <div class="table-container">
+                <h2>Horas por Proyecto</h2>
+                <table>
+                    <thead>
+                        <tr>
+                            <th></th>
+                            <th>Proyecto 1</th>
+                            <th>Proyecto 2</th>
+                            <th>Proyecto 3</th>
+                            <th>Proyecto 4</th>
+                            <th>Proyecto 5</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>Horas Estimadas</td>
+                            <td>22</td>
+                            <td>20</td>
+                            <td>22</td>
+                            <td>20</td>
+                            <td>20</td>
+                        </tr>
+                        <tr>
+                            <td>Horas Totales</td>
+                            <td>22</td>
+                            <td>20</td>
+                            <td>22</td>
+                            <td>20</td>
+                            <td>20</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+
+            <!-- Tabla de barras faltantes -->
+            <div class="table-container">
+                <h2>Consumo y Faltantes por Proyecto</h2>
+                <table>
+                    <thead>
+                        <tr>
+                            <th></th>
+                            <th>Proyecto 1</th>
+                            <th>Proyecto 2</th>
+                            <th>Proyecto 3</th>
+                            <th>Proyecto 4</th>
+                            <th>Proyecto 5</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>Consumo</td>
+                            <td>22</td>
+                            <td>20</td>
+                            <td>22</td>
+                            <td>20</td>
+                            <td>20</td>
+                        </tr>
+                        <tr>
+                            <td>Faltantes</td>
+                            <td>22</td>
+                            <td>20</td>
+                            <td>22</td>
+                            <td>20</td>
+                            <td>20</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <p>SENA 2024</p>
+    </footer>
+</body>
+
+</html>

@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+
+    <div>
+        <nav class="sidebar">
+            <a href="index.html">INICIO</a>
+            <a href="GestMate.html">Materia Prima</a>
+            <a href="Personas.html">Personal</a>
+            <a href="Proyectos.html">Proyectos</a>
+            <a href="Reportes.html">Reportes</a>
+        </nav>
+    </div>
+
+    <h2>Gestión de Materia Prima</h2>
+    <div class="card">
+        <h3>Solicitud de Materia Prima</h3>
+        <form>
+            <label for="Proyecto">Proyecto:</label>
+            <input type="text" id="Proyecto" name="Proyecto"><br><br>
+            
+            <label for="codigo">Codigo:</label>
+            <input type="text" id="codigo" name="codigo"><br><br>
+
+            <label>Numero parte:</label>
+            <input type="text" id="numeroparte" ><br><br>
+
+            <label for="item">Item:</label>
+            <input type="text" id="item" name="item"><br><br>
+            <label for="cantidad">Cantidad:</label>
+            <input type="number" id="cantidad" name="cantidad"><br><br>
+            <button type="submit">Listar</button>
+        </form>
+        <div>
+            <h3>listado de material</h3>
+        </div>
+        <table>
+            <tr>
+                <th>Proyecto</th>
+                <th>codigo</th>
+                <th>numero de parte</th>
+                <th>item</th>
+                <th>cantidad</th>
+            </tr>
+            <tr>
+                <td>Proyecto A</td>
+                <td>1</td>
+                <td>12312</td>
+                <td>tornillo</td>
+                <td>10</td>
+                
+            </tr>
+            <tr>
+                <td>Proyecto A</td>
+                <td>1</td>
+                <td>12312</td>
+                <td>tornillo</td>
+                <td>10</td>
+            </tr>
+            <tr>
+                <td>Proyecto A</td>
+                <td>1</td>
+                <td>12312</td>
+                <td>tornillo</td>
+                <td>10</td>
+            </tr>
+        </table>
+    </div>
+    <div>
+        <button type="submit">Enviar</button>
+        <button type="submit">cancelar</button>
+    </div>
+    </div>
+    
+</body>
+</html>
